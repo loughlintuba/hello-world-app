@@ -23,13 +23,13 @@ ingress:
     kubernetes.io/ingress.class: nginx
     cert-manager.io/cluster-issuer: letsencrypt-prod
   hosts:
-  - host: dev.hello-world.tubaloughlin.com
+  - host: qa.hello-world.tubaloughlin.com
     paths:
     - /
   tls:
   - secretName: hello-tubaloughlin
     hosts:
-    - dev.hello-world.tubaloughlin.com
+    - qa.hello-world.tubaloughlin.com
 
 
 globalEnvironments:
