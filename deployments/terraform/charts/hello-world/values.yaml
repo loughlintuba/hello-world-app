@@ -6,7 +6,8 @@ replicaCount: 5
 
 image:
   repository: ${deployment_image}
-  tag: {{ .Chart.appVersion }}
+  tag: |-
+    {{ .Chart.AppVersion }}
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []
