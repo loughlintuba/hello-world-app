@@ -12,8 +12,7 @@ module "hello-world-deploy" {
 resource "null_resource" "appversion" {
   provisioner "local-exec" {
     command = <<EOF
-    sed -i "s/^appVersion:.*$/appVersion: $(git describe)/" chart/*/Chart.yaml
-    helm upgrade app ./chart  
+    sed -i "s/^appVersion:.*$/appVersion: $(git describe)/" chart/*/Chart.yaml  
     EOF
   }
 }
