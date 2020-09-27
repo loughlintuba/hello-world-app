@@ -8,3 +8,12 @@ module "hello-world-deploy" {
     deployment_image    = "${var.deployment_image}"
   }
 }
+
+resource "null_resource" "appversion" {
+  provisioner "local-exec" {
+    command = <<EOF
+    sed -i "s/^appVersion:.*$/appVersion: $(git describe)/" chart/*/Chart.yaml
+    helm upgrade app ./chart  
+    EOF
+  }
+}
