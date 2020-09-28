@@ -12,7 +12,7 @@ module "hello-world-deploy" {
 resource "null_resource" "appversion" {
   provisioner "local-exec" {
     command = <<EOF
-    sed -i "s/^appVersion:.*$/appVersion: $(git describe)/" charts/${deployment_name}/Chart.yaml  
+    sed -i "s/^appVersion:.*$/appVersion: $(git describe)/" charts/${var.deployment_name}/Chart.yaml  
     EOF
   }
 }
