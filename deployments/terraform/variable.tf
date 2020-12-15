@@ -5,6 +5,10 @@ variable "deployment_image" {
 variable "deployment_environment" {
     default = "stage"
 }
+variable "deployment_name" {
+    default = "hello-world"
+}
+
 
 variable "deployment_endpoint" {
   type = "map"

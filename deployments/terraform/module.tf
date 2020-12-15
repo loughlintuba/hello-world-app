@@ -8,3 +8,4 @@ module "hello-world-deploy" {
      deployment_image    = "${var.deployment_image}"
   }
 }
+
