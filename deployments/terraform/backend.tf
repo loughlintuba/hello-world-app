@@ -1,7 +1,7 @@
 terraform {
   backend "gcs" {
-    bucket  = "tuba-fuchicorp"
+    bucket  = "bucket-loughlin"
     prefix  = "dev/hello-world"
-    project = "brave-aviary-285822"
+    project = "macro-storm-297919"
   }
 }
