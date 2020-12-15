@@ -1,6 +1,7 @@
 variable "deployment_image" {
-  default = "docker.tubaloughlin.com/tubes-hello-app-dev-feature:df74885"
+  default = "tuyalou/hello-world-app:latest"
 }
+
 variable "deployment_environment" {
     default = "stage"
 }
